@@ -8,7 +8,7 @@ C := $(wildcard *.c)
 S := $(wildcard *.s)
 O := $(C:.c=.o) $(S:.s=.o)
 
-CFLAGS := -std=c89 -ansi -pedantic
+CFLAGS := -std=c89 -ansi -pedantic -I./
 CFLAGS += -Wall -Wextra
 CFLAGS += -Oz -fno-stack-protector
 CFLAGS += -fomit-frame-pointer
