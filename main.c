@@ -157,14 +157,14 @@ size_t wgetnstrnb(WINDOW* w, char* buf, size_t n)
 	    cur = l - 1;
 	    break;
 	case KEY_BACKSPACE:
-	    if (cur > 0)
-		cur--;
+	    if (cur <= 0)
+		break;
+	    cur--;
 	    /* fallthrough */
 	case KEY_DC:
-	    if (cur >= l - 1)
+	    if (cur > l)
 		break;
 	    memmove(buf + cur, buf + cur + 1, l - cur - 1);
-	    buf[l - 1] = 0;
 	    l--;
 	    break;
 	case KEY_ENTER:
