@@ -1,30 +1,19 @@
-# PPRC
+# LRCP
+
+LRCP is Lightweight Relay Control Protocol,
+connection-oriented, multiplex-supported.
 
 pprc is peer-to-peer relay chat programme,
-written in ANSI C, based on UDP.
+written with ANSI C, based on LRCP.
 
 ## Syntax
 
 ```
-pprc c [id] [server]
-```
-
-Establish connection to peer via hole-punching.
-Each peer must share session id.
-UNIX user name will be used to identify you with your ip.
-
-```
-pprc d [dest-ip] [dest-port] [port]
+pprc [dest-ip] [dest-port] [port]
 ```
 
 Establish connection directly to peer.
 UNIX user name will be used to identify you with your ip.
-
-```
-pprc s
-```
-
-Open hole-punching server.
 
 ## Requisites
 
@@ -35,5 +24,3 @@ Open hole-punching server.
 ```
 make -j `nproc`
 ```
-
-...and, use pprc in your source directory!
